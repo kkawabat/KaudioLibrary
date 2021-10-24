@@ -5,7 +5,7 @@
 ## requirements
 To install pyAudio on windows use:
 
-> pip isntall --upgrade pip
+> pip isntall --upgrade pip  
 > pip install pipwin   
 > pipwin install pyaudio
 
