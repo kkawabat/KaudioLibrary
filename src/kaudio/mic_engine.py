@@ -13,7 +13,7 @@ class MicEngine:
         self.sampling_rate = None
         self.frame_size = None
 
-    def init_stream(self, sampling_rate=16000, frame_size=4000):
+    def init_stream(self, sampling_rate=16000, frame_size=4000, callback_func=None):
         self.sampling_rate = sampling_rate
         self.frame_size = frame_size
         if self.stream is not None:
@@ -21,7 +21,8 @@ class MicEngine:
 
         self.stream = self.pyaudio_engine.open(format=paInt16, channels=1, rate=self.sampling_rate,
                                                input=True, input_device_index=-1,
-                                               frames_per_buffer=self.frame_size)
+                                               frames_per_buffer=self.frame_size,
+                                               stream_callback=callback_func)
 
     def get_audio_frame(self):
         if self.stream is not None:
