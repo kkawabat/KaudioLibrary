@@ -9,6 +9,6 @@ setup(
     license='MIT',
     author='Kan Kawabata',
     author_email='kkawabat@asu.edu',
-    description='Utility functions used to generate magic eye images',
+    description='this is a library that is used for audio i/o',
     install_requires=['pyaudio']
 )
